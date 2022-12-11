@@ -60,9 +60,10 @@ public class CategoriaController {
 
     } 
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id){
-        service.delete(id);
+    @DeleteMapping
+   // @DeleteMapping("/{id}")     
+    public ResponseEntity<Void> delete(@RequestBody Categoria cat){       
+        service.delete(cat.getId());;
         return ResponseEntity.noContent().build();
 
     }
