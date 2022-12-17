@@ -63,7 +63,7 @@ public class CategoriaController {
     @DeleteMapping
    // @DeleteMapping("/{id}")     
     public ResponseEntity<Void> delete(@RequestBody Categoria cat){       
-        service.delete(cat.getId());;
+        service.delete(cat.getId());
         return ResponseEntity.noContent().build();
 
     }
